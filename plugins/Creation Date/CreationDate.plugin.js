@@ -29,12 +29,12 @@ class CreationDate {
 
     observer(ev) {
 		if (ev.addedNodes.length > 0 && ev.addedNodes[0].className && typeof ev.addedNodes[0].className === "string" && ev.addedNodes[0].className.includes("popout") 
-			&& ev.addedNodes[0].childNodes.length > 0 && ev.addedNodes[0].childNodes[0].className.includes("userPopout")) {
+			&& ev.addedNodes[0].childNodes.length > 0 && ev.addedNodes[0].childNodes[0].className.includes("userPopout-4pfA0d")) {
 				const user = this.getInternalInstance(ev.addedNodes[0]).memoizedProps.children.props.user;
 				const match = this.settings.format.match(/\$\((.*)\)\$/);
 				const date = this.getCreationDate(user.id, match[1]);
 
-				const activity = $(ev.addedNodes[0].childNodes[0]).find(".headerActivityText-3qBQRo");
+				const activity = $(ev.addedNodes[0].childNodes[0]).find(".headerText-3tKBWq");
 				
 				if (activity[0].childNodes.length > 0) {
 					activity.after($("<div>", {
